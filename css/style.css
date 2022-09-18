@@ -7,9 +7,16 @@
     box-sizing: border-box;
 }
 
+/* variables de colores */
+
+:root{
+    --azul-oscuro: rgba(13, 26, 100, 0.849);
+}
+
 body{
-    background: linear-gradient(to bottom, rgba(52, 46, 168, 0.98),rgba(3, 3, 31, 0.98)),
-    url(../img/fondo-index.jpg);
+    background: linear-gradient(to bottom, rgba(34, 34, 34, 0.98),rgba(3, 3, 3, 0.98)),
+    url(../img/fondo-index.jpg);    
+    /* background: var(--azul-oscuro);*/    
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -117,10 +124,10 @@ body{
     justify-content: space-between;/*separa horizontalmente la imagen y el nav*/
     align-items: center;
     height: 100px;
-    background: linear-gradient(to bottom, rgb(44, 44, 153), rgb(9, 11, 37));
+    background: linear-gradient(to bottom, #141414, #000000);
     margin-bottom: 15px;
-    border-bottom: 3px solid rgb(159, 166, 178);
-    box-shadow: 0px -3px 1px rgb(8, 54, 139);
+    border-bottom: 3px solid #313131;
+    box-shadow: 0px -3px 1px rgb(54, 54, 54);
 }
   
 .encab img{
@@ -169,6 +176,8 @@ main{
     flex-direction: column;
     align-items: center;
     gap: 5rem;
+    padding-top: 2rem;
+    background: linear-gradient(to bottom, rgba(61, 61, 61, 0.98),rgba(34, 34, 34, 0.98));
 }
 
 .cont-dos{
@@ -177,6 +186,7 @@ main{
     flex-direction: column;
     align-items: center;
     gap: 5rem;
+    background: linear-gradient(to bottom, rgba(128, 128, 128, 0.98),rgba(51, 51, 51, 0.98));
 }
 
 
@@ -290,15 +300,14 @@ footer h4{
         width: 8rem;
         margin: 2px;
         padding: 7px;
-        border: solid 1px #0e1153;
-        border-radius: 6px 6px 6px 6px;
+        border-radius: 6px;
         transition: .5s ease all;
     }
 
     header nav a:hover{
         color: rgb(225, 241, 41);
-        background: linear-gradient(to bottom, rgb(20, 20, 150), rgb(10, 13, 54));
-        box-shadow: 0px 0px 7px rgb(112, 152, 197);
+        background: radial-gradient(ellipse at top, rgb(37, 37, 21), rgb(0, 0, 0));
+        box-shadow: 0px 0px 2px rgb(255, 255, 255);
         scale: 1.05;
     }
 
@@ -324,6 +333,7 @@ footer h4{
         grid-template-areas: 
         "naveg cont aside";
         align-items: flex-start;
+        margin-top: 5rem;
     }
 
 
@@ -349,10 +359,11 @@ footer h4{
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         position: relative;
         width: 75%;
         height: 10rem;
-        transition: 0.5s ease all;
+        transition: 1s ease all;
         border-radius: 10px;
         box-shadow: 0 5px 10px #000;
 
@@ -364,34 +375,19 @@ footer h4{
 
     }
 
-    .navegacion .boton-nav .capa{
-        display: flex;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        transition: 1s ease-out;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.734), rgba(207, 207, 207, 0.762));
-    }
-
-    .navegacion .boton-nav .capa:hover{
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(207, 207, 207, 0.2));
-    }
-
-
-
-
-
-        
-        
-
 
     .img-nav{
-        width: 100%;
-        height: 100%;
+        width: 90%;
+        height: 95%;
         position: relative;
         object-fit: cover;
         border-radius: 10px;
+        filter: blur(2px);
+        transition: 3s;
+    }
+
+    .img-nav:hover{
+        filter: none;
     }
 
 
@@ -400,9 +396,11 @@ footer h4{
         position: absolute;
         bottom: 0;
         font-size: 0.8rem;
-        color: #000000;
         width: 100%;
         height: 1.5rem;
+        color: #ffffff;
+        text-shadow: 1px 1px 5px #000;
+        
     }
 
 
@@ -420,15 +418,22 @@ footer h4{
         grid-area: cont;
         display: flex;
     }
+
+    .cont-uno{
+        padding: 2rem;
+    }
+
+    .cont-dos{
+        padding: 2rem;
+    }
     
 
     /* prop de SECCIONES */
 
     .secciones{
     height: 30rem;
-    width: 90%;
+    width: 100%;
     border-radius: 10px;
-    margin-right: 3rem;
     transition: .3s ease all;
     box-shadow: 0 5px 10px #000;
     }
@@ -436,7 +441,7 @@ footer h4{
     .secciones:hover{
         scale: 1.02;
         border: solid 2px #262740;
-        box-shadow: 0 0 20px rgb(190, 235, 242);
+        box-shadow: 0 0 3px rgb(171, 175, 137);
     }
 
     .imagen-secc{
@@ -525,7 +530,6 @@ footer h4{
         position: absolute;
         width: 100%;
         height: 100%;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6));
     }
 
     .card .front{
@@ -560,7 +564,7 @@ footer h4{
         justify-content: space-between;
         text-align: center;
         color: #ffffff;
-        background: linear-gradient(to bottom, rgba(75, 75, 84, 0.3), rgba(0, 0, 0, 0.7));
+        background: linear-gradient(to bottom, rgba(9, 9, 226, 0.6), rgba(0, 0, 0, 0.945));
         box-shadow: 0 5px 10px #000;
         transform: perspective(600px) rotateY(180deg);
     }
@@ -571,6 +575,7 @@ footer h4{
         height: 100%;
         object-fit: cover;
         border-radius: 5px;
+        filter: brightness(.3);
     }
 
 
