@@ -118,9 +118,9 @@ body{
 
 .encab{
     position: sticky;
+    display: flex;
     top: 0;
     z-index: 1;
-    display: flex;
     justify-content: space-between;/*separa horizontalmente la imagen y el nav*/
     align-items: center;
     height: 100px;
@@ -165,11 +165,14 @@ body{
 .encab nav a{
     text-decoration: none;
     font-weight: bold;
-    margin: 50px 0;
-    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    width: 90vw;
+    padding: 2rem;
     font-size: 1.2rem;
     color: rgb(250, 250, 250);
-    width: 2rem;
+    overflow: hidden;
+    border-bottom: 1px solid #464646;
 }
 
 #check:checked ~ nav{
@@ -223,16 +226,16 @@ main{
     flex-direction: column;
     align-items: center;
     gap: 5rem;
+    padding-top: 2rem;
     background: linear-gradient(to bottom, rgba(26, 26, 26, 0.98),rgba(51, 51, 51, 0.98));
     box-shadow: 0 0 5px #000;
 }
 
 .titulo{
     width: 90%;
-    height: 6rem;
     text-align: center;
-    line-height: 7rem;
-    font-size: 2rem;
+    line-height: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #ffffff;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 1);
@@ -332,7 +335,7 @@ footer{
     left: 0;
     padding: 6rem 8%;
     margin-top: 20rem;
-    background-color: rgb(148, 148, 148);
+    background-color: rgb(87, 87, 87);
 }
 
 footer .logo{
@@ -441,14 +444,15 @@ footer .logo{
     .encab nav a{
         text-decoration: none;
         font-weight: bold;
-        font-size: 1.1rem;
+        font-size: 1rem;
         color: rgb(250, 250, 250);
-        width: 7rem;
         margin: 5px 0;
-        padding: 7px 8px;
+        padding: 5px 8px;
         border: solid 1px rgb(0, 0, 0);
         border-radius: 6px;
         transition: .5s ease all;
+        width: 18%;
+        overflow: hidden;
     }
     header nav a:hover{
         color: rgb(225, 241, 41);
@@ -489,8 +493,7 @@ footer .logo{
         right: 5%;
         top: 0;
         text-align: center;
-        justify-content: end;
-        gap: 0.2rem;
+        gap: 0.4rem;
         margin-right: 2rem;
         background-color: transparent;
     }
@@ -504,14 +507,15 @@ footer .logo{
     .encab nav a{
         text-decoration: none;
         font-weight: bold;
-        font-size: 1.2rem;
+        font-size: 1rem;
         color: rgb(250, 250, 250);
-        width: 8rem;
-        margin: 5px 0;
-        padding: 7px 8px;
+        margin: 10px 0;
+        padding: 5px 8px;
         border: solid 1px rgb(0, 0, 0);
         border-radius: 6px;
         transition: .5s ease all;
+        width: 15%;
+        overflow: hidden;
     }
 
     header nav a:hover{
