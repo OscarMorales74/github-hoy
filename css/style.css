@@ -49,25 +49,24 @@ body{
 }
 
 .portada .texto{
-    display: flex;
     width: 50%;
     text-align: center;
     justify-items: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #ffffff;    
     text-shadow: 0 1px 3px rgba(0, 0, 0, 1);
 }
 
 .portada .vamos{
-    padding: 1rem 5rem;
-    height: 2em;
+    padding: 1rem 2rem;
+    height: 4rem;
     text-align: center;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #ffffff;    
-    border: solid 2px #ffffff;
+    border: solid 2px #747474;
     border-radius: 3rem;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 1);
     background-color: rgba(0, 0, 0, 0.5);
@@ -131,7 +130,7 @@ body{
 }
   
 .encab a img{
-    height: 90px;
+    height: 70px;
     display: flex;
     margin-left: 2rem;
 }
@@ -140,7 +139,7 @@ body{
 
 .checkbtn{
     display: flex;
-    height: 60px;
+    height: 45px;
     filter: invert(1);
     margin-right: 2rem;
     cursor: pointer;
@@ -156,8 +155,8 @@ body{
     text-align: end;
     width: 100%;
     height: 80vh;
-    right: -100vw;
-    top: 150px;
+    left: -100vw;
+    top: 100px;
     background-color: #313131;
     transition: all .7s;
 }
@@ -173,7 +172,7 @@ body{
 }
 
 #check:checked ~ nav{
-    right: 0;
+    left: 0;
 }
 
 #check{
@@ -327,16 +326,16 @@ footer{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 85vh;
+    height: 85%;
     bottom: 0;
     left: 0;
     padding: 6rem 8%;
-    margin-top: 10rem;
+    margin-top: 20rem;
     background-color: rgb(148, 148, 148);
 }
 
 footer .logo{
-    height: 150px;
+    height: 100px;
     margin-bottom: 1rem;
 }
 
@@ -355,11 +354,11 @@ footer .logo{
 }
 
 .social-icon{
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     border: solid 1px #696969;
     border-radius: 50px;
-    margin: 2rem;
+    margin: 1rem;
 
 }
 
@@ -374,7 +373,7 @@ footer .logo{
 }
 
 .menu-item{
-    margin: 1rem 2rem;
+    margin: 1rem 1rem;
     opacity: 0.6;
 }
 
@@ -385,7 +384,7 @@ footer .logo{
 .copyrigth{
     opacity: 0.6;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 1rem;
 }
 
 
@@ -411,22 +410,69 @@ footer .logo{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (min-width:600px){
+
+    
+    /* prop. del HEADER, que incluyen su imagen y el menu */
+
+    .encab nav{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        right: 5%;
+        top: 0;
+        text-align: center;
+        justify-content: end;
+        gap: 0.1rem;
+        margin-right: 0.2rem;
+        background-color: transparent;
+    }
+
+    .encab a img{
+        height: 80px;
+        display: flex;
+        margin-left: 1rem;
+    }
+
+    .encab nav a{
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 0.9rem;
+        color: rgb(250, 250, 250);
+        width: 6rem;
+        margin: 5px 0;
+        padding: 7px 8px;
+        border: solid 1px rgb(0, 0, 0);
+        border-radius: 6px;
+        transition: .5s ease all;
+    }
+    header nav a:hover{
+        color: rgb(225, 241, 41);
+        background: radial-gradient(ellipse at top, rgb(37, 37, 21), rgb(0, 0, 0));
+        box-shadow: 0px 0px 2px rgb(255, 255, 255);
+        scale: 1.05;
+    }
+
+    .checkbtn{
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:900px){
 
     
     /* prop. del HEADER, que incluyen su imagen y el menu */
@@ -444,6 +490,12 @@ footer .logo{
         gap: 0.2rem;
         margin-right: 2rem;
         background-color: transparent;
+    }
+
+    .encab a img{
+        height: 90px;
+        display: flex;
+        margin-left: 2rem;
     }
 
     .encab nav a{
@@ -469,32 +521,6 @@ footer .logo{
     .checkbtn{
         display: none;
     }
-
-/*
-    .encab nav{
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        align-items: center;
-        text-align: end;
-        width: 100%;
-        height: 80vh;
-        right: -100vh;
-        top: 150px;
-        background-color: #313131;
-        transition: all .7s;
-    }
-    
-    .encab nav a{
-        text-decoration: none;
-        font-weight: bold;
-        margin: 50px 0;
-        line-height: 20px;
-        font-size: 1.2rem;
-        color: rgb(250, 250, 250);
-        width: 2rem;
-    }
-    */
 
 
 
@@ -564,6 +590,7 @@ footer .logo{
         height: 95%;
         position: relative;
         object-fit: cover;
+        border: 1px solid #3f3f3f;
         border-radius: 10px;
         filter: blur(2px);
         transition: 3s;
@@ -783,3 +810,6 @@ footer .logo{
     }
 
 }
+
+
+
